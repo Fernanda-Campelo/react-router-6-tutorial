@@ -8,14 +8,13 @@ import ErrorPage from "./pages/Error";
 function App() {
   return (
     <BrowserRouter>
-      <nav>our navbar</nav>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="products" element={<Products />} />
-        <Route path="*" element={<ErrorPage />} />
+        <Route path="/" element={<Home />}>
+          <Route path="about" element={<About />} />
+          <Route path="products" element={<Products />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Route>
       </Routes>
-      <footer>our footer</footer>
     </BrowserRouter>
   );
 }
